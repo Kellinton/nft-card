@@ -34,11 +34,31 @@
     background-color: var(--colorBgCard);
     border-radius: 10px;
     padding: 1.50%;
+    box-shadow: 0px 0px 200px rgba(6, 3, 33, 1);
   }
-  body .card-container #card-img{
+  body .card-container .card-img{
+    background-image: url(../img/image-equilibrium.jpg);   
+    background-size: cover;
     width: 19em;
-    height: 18em;
+    height: 39em;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+    cursor: pointer;
+  }
+  body .card-container .card-img:hover{
+    filter: saturate(4);
+  }
+  body .card-container #card-view{
+    width: 3em;
+    height: 3em;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  body .card-container .card-img:hover #card-view{
+    opacity: 1;
   }
   body .card-container .card-info{
     width: 100%;
@@ -50,6 +70,10 @@
   body .card-container .card-info h4{
     color: var(--white);
     font-size: 1.5rem;
+  }
+  body .card-container .card-info h4:hover{
+    cursor: pointer;
+    color: var(--color2);
   }
   body .card-container .card-info p{
     color: var(--color1);
@@ -94,6 +118,10 @@
   body .card-container .card-info .card-creator span{
     color: var(--white);
   }
+  body .card-container .card-info .card-creator span:hover{
+  cursor: pointer;
+    color: var(--color2);
+ }
   hr{
     border: 1px solid;
     color: var(--colorLine);
